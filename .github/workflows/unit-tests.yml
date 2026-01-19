@@ -21,6 +21,8 @@ jobs:
                 architecture: x64
                 cache: 'maven'
 
-            - name: Run the Maven tests
-              run: mvn clean test -Dtest=com.devops.cicd.PasswordPolicyTest && |
-                   mvn clean test -Dtest=com.devops.cicd.PricingServiceTest
+            - name: Run the Maven tests (PasswordPolicyTest)
+              run: mvn clean test -Dtest=com.devops.cicd.PasswordPolicyTest
+            
+            - name: Run the Maven tests (PricingServiceTest)
+              run: mvn clean test -Dtest=com.devops.cicd.PricingServiceTest
